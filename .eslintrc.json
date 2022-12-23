@@ -15,7 +15,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "koche",
+            "prefix": "al",
             "style": "camelCase"
           }
         ],
@@ -23,7 +23,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "koche",
+            "prefix": "al",
             "style": "kebab-case"
           }
         ]
