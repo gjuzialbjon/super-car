@@ -34,5 +34,8 @@
       "extends": ["plugin:@nrwl/nx/angular-template"],
       "rules": {}
     }
-  ]
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  }
 }
