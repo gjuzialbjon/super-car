@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -9,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'al-navbar',
   standalone: true,
   imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule],
-  template: ` <mat-toolbar color="primary">
+  template: ` <!-- Toolbar menu -->
+  <mat-toolbar color="primary">
     <button
       mat-icon-button
       class="example-icon"
@@ -17,7 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
       (click)="toggleMenu.emit()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Makinaaaa</span>
+    <span>Kerra me shumic dhe pakic</span>
     <span class="example-spacer"></span>
     <button
       mat-icon-button
@@ -35,5 +41,5 @@ import { MatButtonModule } from '@angular/material/button';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  @Output() toggleMenu = new EventEmitter()
+  @Output() toggleMenu = new EventEmitter();
 }

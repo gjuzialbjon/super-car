@@ -1,0 +1,1 @@
+export const SMALL_SCREEN_WIDTH_THRESHOLD = 599;  
