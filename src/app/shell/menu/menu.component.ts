@@ -15,8 +15,8 @@ import { ROUTES } from '@core/routes-config';
         mat-list-item
         *ngFor="let link of links"
         [routerLink]="link.path"
-        [activated]="link.isActive">
-        <mat-icon matListItemIcon class="mr-2">home</mat-icon>
+        routerLinkActive="active-menu">
+        <mat-icon matListItemIcon class="mr-2">{{ link.icon }}</mat-icon>
         <span class="menu-item-title">{{ link.title }}</span>
       </a>
     </mat-nav-list>`,
@@ -24,5 +24,5 @@ import { ROUTES } from '@core/routes-config';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuComponent {
-  links = ROUTES
+  links = ROUTES;
 }

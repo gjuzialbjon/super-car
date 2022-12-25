@@ -1,1 +1,1 @@
-export const SMALL_SCREEN_WIDTH_THRESHOLD = 599;  
+export const SM_SCREEN_WIDTH_THRESHOLD_QUERY = '(max-width: 599px)';

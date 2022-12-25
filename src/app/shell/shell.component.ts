@@ -5,7 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
-import { SMALL_SCREEN_WIDTH_THRESHOLD } from '@core/config';
+import { SM_SCREEN_WIDTH_THRESHOLD_QUERY } from '@core/config';
 
 @Component({
   selector: 'al-shell',
@@ -20,30 +20,29 @@ import { SMALL_SCREEN_WIDTH_THRESHOLD } from '@core/config';
   ],
   template: `<!-- Layout with a left-positioned sidenav and main content. -->
     <al-navbar (toggleMenu)="sidenav.toggle()"></al-navbar>
-    <mat-sidenav-container>
+    <mat-sidenav-container [hasBackdrop]="isSmallScreen">
       <mat-sidenav
         #sidenav
         [mode]="isSmallScreen ? 'over' : 'side'"
-        opened
+        [opened]="!isSmallScreen"
         fixedInViewport
-        [fixedTopGap]="isSmallScreen ? 56 : 64"
+        [fixedTopGap]="navbarHeight"
         class="w-52">
         <al-menu></al-menu>
       </mat-sidenav>
-      <mat-sidenav-content class="p-4">
-        <!-- <router-outlet></router-outlet> -->
-        <div class="content mat-elevation-z8">Main content here!</div>
+      <mat-sidenav-content
+        [style.min-height]="contentHeightMinHeight"
+        class="p-4 h-screen">
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>`,
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellComponent {
-  isSmallScreen;
+  isSmallScreen = this.breakpointObserver.isMatched(SM_SCREEN_WIDTH_THRESHOLD_QUERY);
+  navbarHeight = 56;
+  contentHeightMinHeight = `calc(100vh - ${this.navbarHeight}px)`;
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    this.isSmallScreen = breakpointObserver.isMatched(
-      `(max-width: ${SMALL_SCREEN_WIDTH_THRESHOLD}px)`
-    );
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 }

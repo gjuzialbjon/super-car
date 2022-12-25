@@ -2,16 +2,16 @@ export const ROUTES = [
   {
     path: 'home',
     title: 'Home',
-    isActive: false,
+    icon: 'home',
   },
   {
-    path: 'shell',
-    title: 'Shell',
-    isActive: false,
+    path: 'cars-list',
+    title: 'Cars',
+    icon: 'directions_car',
   },
   {
-    path: 'empty',
-    title: 'Empty',
-    isActive: false,
+    path: 'garage',
+    title: 'Garage',
+    icon: 'garage',
   },
 ];
