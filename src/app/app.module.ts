@@ -17,9 +17,11 @@ const ROUTES: Route[] = [
   {
     path: 'cars-list',
     loadComponent: () =>
-      import('./views/cars-list/cars-list.component').then(
-        m => m.CarsListComponent
-      ),
+      import('./views/cars-list/cars-list.component').then(m => m.CarsListComponent),
+  },
+  {
+    path: '**',
+    redirectTo: 'cars-list',
   },
   // ...
 ];
@@ -32,7 +34,9 @@ const ROUTES: Route[] = [
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES, {
+      useHash: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
