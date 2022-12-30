@@ -15,6 +15,7 @@ import { APP_CONFIG, BRAND_OPTIONS, LOCATION_OPTIONS } from '@core/config';
 import { DropdownComponent } from '../../components/dropdown/dropdown.component';
 import { RangeComponent } from '../../components/range/range.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ColorsComponent } from '../../components/colors/colors.component';
 
 @Component({
   selector: 'al-filters',
@@ -30,6 +31,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     DropdownComponent,
     RangeComponent,
     MatExpansionModule,
+    ColorsComponent,
   ],
   templateUrl: './filters.component.html',
   styles: [],

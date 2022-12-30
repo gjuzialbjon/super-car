@@ -1,0 +1,11 @@
+<mat-button-toggle-group
+  name="ingredients"
+  aria-label="Ingredients"
+  multiple
+  class="colors-checkboxes">
+  <mat-button-toggle
+    *ngFor="let col of colors"
+    [value]="col"
+    [style.background-color]="col"
+    class="rounded-none"></mat-button-toggle>
+</mat-button-toggle-group>

@@ -1,4 +1,4 @@
-<mat-accordion class="">
+<mat-accordion>
   <mat-expansion-panel expanded>
     <mat-expansion-panel-header>
       <mat-panel-title> Filters </mat-panel-title>
@@ -51,6 +51,8 @@
         [min]="config.startPrice"
         [max]="config.endPrice"
         [label]="'Price'"></al-range>
+
+      <al-colors class="pl-2"></al-colors>
     </form>
   </mat-expansion-panel>
 </mat-accordion>

@@ -39,10 +39,6 @@ a.mdc-list-item.active-menu {
 }
 
 .filters {
-  mat-form-field, .form-field {
-    margin-right: 10px;
-  }
-
   .form-field {
     width: 212px;
   }
@@ -50,6 +46,14 @@ a.mdc-list-item.active-menu {
   .mat-mdc-slider {
     width: 200px;
   }
+}
+
+.colors-checkboxes {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0;
+  max-width: 204px;
 }
 
 // .max-lines-3 {

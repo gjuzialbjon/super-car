@@ -18,9 +18,15 @@ import { MatSliderModule } from '@angular/material/slider';
     <span class="inline-flex w-[200px] flex-col form-field" [formGroup]="form">
       <span class="flex justify-between mx-2">
         <label class="">{{ label }}</label>
-        <label class="">{{ start.value + ' - ' + end.value }}</label>
+        <label *ngIf="startForm === 'startPrice'; else startEnd" class="">
+          {{ start.value | currency : 'EUR' : 'symbol' : '1.0-0' }} -
+          {{ end.value | currency : 'EUR' : 'symbol' : '1.0-0' }}
+        </label>
+        <ng-template #startEnd>
+          <label for="slider">{{ start.value + ' - ' + end.value }}</label>
+        </ng-template>
       </span>
-      <mat-slider [min]="min" [max]="max" [step]="step">
+      <mat-slider id="slider" [min]="min" [max]="max" [step]="step">
         <input #start [formControlName]="startForm" matSliderStartThumb />
         <input #end [formControlName]="endForm" matSliderEndThumb />
       </mat-slider>
