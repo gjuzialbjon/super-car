@@ -1,0 +1,56 @@
+<mat-accordion class="">
+  <mat-expansion-panel expanded>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Filters </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form class="filters flex content-center flex-col md:flex-col flex-wrap">
+      <al-dropdown
+        [form]="form"
+        [label]="'Location'"
+        [control]="'location'"
+        [options]="options.locations"></al-dropdown>
+
+      <al-dropdown
+        [form]="form"
+        [label]="'Brand'"
+        [control]="'brand'"
+        [options]="options.brands"></al-dropdown>
+
+      <al-dropdown
+        [form]="form"
+        [label]="'Transmission'"
+        [control]="'brand'"
+        [options]="options.brands"></al-dropdown>
+
+      <al-dropdown
+        [form]="form"
+        [label]="'Fuel'"
+        [control]="'brand'"
+        [options]="options.brands"></al-dropdown>
+
+      <al-range
+        [form]="form"
+        [startForm]="'startKm'"
+        [endForm]="'endKm'"
+        [min]="config.startKm"
+        [max]="config.endKm"
+        [label]="'Km'"></al-range>
+
+      <al-range
+        [form]="form"
+        [startForm]="'startYear'"
+        [endForm]="'endYear'"
+        [min]="config.startYear"
+        [max]="config.endYear"
+        [label]="'Year'"></al-range>
+
+      <al-range
+        [form]="form"
+        [startForm]="'startPrice'"
+        [endForm]="'endPrice'"
+        [min]="config.startPrice"
+        [max]="config.endPrice"
+        [label]="'Price'"></al-range>
+    </form>
+  </mat-expansion-panel>
+</mat-accordion>

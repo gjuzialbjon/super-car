@@ -5,6 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from '@core/routes-config';
+
 @Component({
   selector: 'al-menu',
   standalone: true,

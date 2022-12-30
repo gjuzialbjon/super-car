@@ -1,1 +1,32 @@
-<p>car works!</p>
+<mat-card
+  class="car-card md:h-full mat-elevation-z3"
+  [matTooltip]="car.desc"
+  matTooltipPosition="after"
+  matTooltipTouchGestures="off">
+  <div class="car-img relative w-full h-[200px]">
+    <img
+      ngSrc="https://fakeimg.pl/200x150/0000ff/fff"
+      class="object-contain"
+      fill
+      priority
+      alt="Photo of a Shiba Inu" />
+  </div>
+  <mat-card-header class="w-full mb-2">
+    <mat-card-title class="text-base">{{ car.title }}</mat-card-title>
+    <mat-card-subtitle>
+      <span class="font-bold km">{{ car.km }} Km</span>
+      <span class="font-bold year">{{ car.year }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content> </mat-card-content>
+  <mat-card-actions align="end" class="mt-auto">
+    <span class="price ml-2 mr-auto font-bold">{{
+      car.price | currency : 'EUR' : 'symbol' : '1.0-0'
+    }}</span>
+    <button mat-button>SHARE</button>
+    <button mat-icon-button>
+      <mat-icon class="material-symbols-outlined">favorite</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

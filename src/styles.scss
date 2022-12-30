@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -16,3 +17,46 @@ body {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+a.mdc-list-item.active-menu {
+  color: #efafe6;
+  border-right: 2px solid red;
+}
+
+.mat-drawer {
+  background-color: inherit;
+}
+
+.car-card {
+  .mat-mdc-card-header {
+    display: block;
+  }
+
+  .mat-mdc-card-subtitle {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.filters {
+  mat-form-field, .form-field {
+    margin-right: 10px;
+  }
+
+  .form-field {
+    width: 212px;
+  }
+
+  .mat-mdc-slider {
+    width: 200px;
+  }
+}
+
+// .max-lines-3 {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   display: -webkit-box;
+//   -webkit-line-clamp: 3; /* number of lines to show */
+//   line-clamp: 3;
+//   -webkit-box-orient: vertical;
+// }

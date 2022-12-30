@@ -6,6 +6,7 @@ import { ShellComponent } from './shell/shell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { Route } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const ROUTES: Route[] = [
   {
@@ -28,6 +29,8 @@ const ROUTES: Route[] = [
   imports: [
     BrowserModule,
     ShellComponent,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
   ],
