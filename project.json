@@ -11,7 +11,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/koche",
+        "outputPath": "docs",
         "index": "./src/index.html",
         "main": "./src/main.ts",
         "polyfills": [
@@ -95,6 +95,9 @@
         "jestConfig": "jest.config.app.ts",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "angular-cli-ghpages:deploy"
     }
   },
   "tags": []
